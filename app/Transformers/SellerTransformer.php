@@ -43,4 +43,20 @@ class SellerTransformer extends TransformerAbstract
         
         ];
     }
+
+    public static function originalAttributeName($index)
+    {
+        $attribute = [
+            'identificador' =>  'id',
+            'nombre' =>  'name',
+            'correo' => 'email',
+            'verificado' => 'verified',
+            'fechaCreacion' => 'created_at',
+            'fechaActualizacion' => 'updated_at',
+            'fechaEliminacion' => 'deleted_at',
+        
+        ];
+
+        return isset($attribute[$index]) ? $attribute[$index] : null;
+    }
 }
